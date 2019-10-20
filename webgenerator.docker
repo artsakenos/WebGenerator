@@ -1,5 +1,6 @@
 FROM artsakenos/webgenerator:generator_1.1
-COPY webgenerator /usr/local/lib/webgenerator
+COPY wg_grammar.txt /usr/local/lib/webgenerator/wg_grammar.txt
+COPY wg_site /usr/local/lib/webgenerator/wg_site
 
 # Build & RUN
 # docker build -f webgenerator.docker -t webgenerator:il_mio_wg_personalizzato .
