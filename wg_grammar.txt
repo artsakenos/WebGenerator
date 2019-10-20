@@ -1,0 +1,21 @@
+
+# In web generator sono già incluse alcune grammatiche.
+# Per utilizzare all'interno di WebGenerator basta sostituire il testo HTML con e.g., UCMS§REPLACE§GRAMMAR§<placeholder>°°°
+
+# Ancuni placeholder sono:
+# {slogangoverno}	Viene sostituito con uno slogan di governo.
+# {nome_proprio_maschile}, {nome_proprio_femminile}, {cognome}	Autoesplicativi.
+
+# Esempio di grammatica
+{animale}:=gatto|cane|maiale
+{colore}:=rosso|bianco|verde
+{nome_negozio_animali}:=Il {animale} {colore}
+# Inserisco nel sito da qualche parte: UCMS§REPLACE§GRAMMAR§{nome_negozio_animale}°°°
+# Verrà sostituito di volta in volta con Il gatto verde, Il maiale bianco, etc.
+
+# Esempio con qualche step di ricorsione, a volte un nome può includere più nomi propri.
+{nome_cognome_femminile}:={nome_proprio_femminile} {cognome}|{nome_proprio_femminile} {nome_proprio_femminile} {cognome}
+{attivista}:=Designer|Madre|Ragazza|Amante|Prostituta|Donna alla pari|Bella
+# Perché non tutti i placeholder vengano sostituiti con lo stesso termine aggiungo un numero, ad esempio:
+# UCMS§REPLACE§GRAMMAR1§{attivista}°°°, # UCMS§REPLACE§GRAMMAR2§{attivista}°°°, # UCMS§REPLACE§GRAMMAR3§{attivista}°°°
+# Questi esempi sono utilizzati all'interno del sito di esempio.

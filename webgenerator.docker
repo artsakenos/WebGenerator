@@ -1,0 +1,6 @@
+FROM artsakenos/webgenerator:generator_1.1
+COPY webgenerator /usr/local/lib/webgenerator
+
+# Build & RUN
+# docker build -f webgenerator.docker -t webgenerator:il_mio_wg_personalizzato .
+# docker run -it --rm -d -p 8085:8085 webgenerator:il_mio_wg_personalizzato
