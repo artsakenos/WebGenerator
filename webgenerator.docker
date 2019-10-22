@@ -2,6 +2,9 @@ FROM artsakenos/webgenerator:generator_1.1
 COPY wg_grammar.txt /usr/local/lib/webgenerator/wg_grammar.txt
 COPY wg_site /usr/local/lib/webgenerator/wg_site
 
+# DEMO RUN
+docker run -it --rm -d -p 8085:8085 artsakenos/webgenerator:1.1
+
 # Build & RUN
 # docker build -f webgenerator.docker -t webgenerator:il_mio_wg_personalizzato .
 # docker run -it --rm -d -p 8085:8085 webgenerator:il_mio_wg_personalizzato
